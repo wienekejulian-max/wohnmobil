@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Entwurf: nicht in Suchmaschinen aufnehmen, solange die Daten ungeprüft sind -->
+<meta name="robots" content="noindex">
+<title>Mautklar: Maut-Rechner für Wohnmobile</title>
+<meta name="description" content="Was kostet die Maut für dein Wohnmobil? Rechner für Österreich, Schweiz, Frankreich und Italien nach Gewicht, Höhe und Achsen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="draft"><div class="wrap"><b>Entwurf.</b> Alle Preise sind grobe Beispielwerte und noch nicht geprüft. Der Name „Mautklar“ ist nur ein Arbeitstitel.</div></div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><i></i>Mautklar <small>Maut für Wohnmobile</small></a>
+  <nav><a href="/" aria-current="page">Rechner</a><a href="/laender/">Länder</a><a href="/ratgeber/">Ratgeber</a><a href="/ueber/">Über</a></nav>
+</div></header>
+
+<main class="wrap">
+<h1>Was kostet die Maut für dein Wohnmobil?</h1>
+<p class="lead">Gib Gewicht, Höhe und Achsen ein und wähle die Länder deiner Route. Du siehst sofort, ob du eine Vignette, eine Mautbox oder eine bestimmte Mautklasse brauchst.</p>
+<div class="calc">
+  <form class="panel" id="rechner" onsubmit="return false">
+    <fieldset>
+      <div class="row">
+        <div class="field"><label for="gew">Zul. Gesamtgewicht (t)</label><input id="gew" type="number" step="0.05" min="1" max="12" value="3.5"></div>
+        <div class="field"><label for="hoe">Höhe (m)</label><input id="hoe" type="number" step="0.05" min="1.5" max="4" value="2.95"></div>
+      </div>
+      <div class="hint">Steht im Fahrzeugschein: Gewicht unter F.2, Höhe unter 18.</div>
+    </fieldset>
+    <fieldset><legend>Achsen</legend>
+      <div class="seg">
+        <label><input type="radio" name="achsen" id="achsen-2" value="2" checked><span>2 Achsen</span></label>
+        <label><input type="radio" name="achsen" id="achsen-3" value="3"><span>3 Achsen</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="field"><label for="tage">Reisedauer (Tage)</label><input id="tage" type="number" min="1" max="365" value="14"></div>
+    </fieldset>
+    <fieldset><legend>Route: Autobahn-km pro Land</legend>
+      <div class="countries" id="ctys"></div>
+      <div class="hint">Beispiel: München nach Riva del Garda über den Brenner.</div>
+    </fieldset>
+  </form>
+  <div class="panel" aria-live="polite">
+    <div class="total"><div><div class="lbl">Geschätzte Maut gesamt</div><b id="sum">0 €</b></div><span id="sumNote"></span></div>
+    <div class="res" id="res"></div>
+    <div class="cmp" id="cmp"></div>
+  </div>
+</div>
+
+<h2>Maut nach Ländern</h2>
+<div class="grid4">
+  <a class="tile" href="/laender/oesterreich/"><h3><span class="code">A</span>Österreich</h3><p>Vignette bis 3,5 t, darüber GO-Maut mit GO-Box.</p></a>
+  <a class="tile" href="/laender/schweiz/"><h3><span class="code">CH</span>Schweiz</h3><p>Vignette bis 3,5 t, darüber Schwerverkehrsabgabe pro Tag.</p></a>
+  <a class="tile" href="/laender/frankreich/"><h3><span class="code">F</span>Frankreich</h3><p>Streckenmaut, Klasse nach Höhe, Gewicht und Achsen.</p></a>
+  <a class="tile" href="/laender/italien/"><h3><span class="code">I</span>Italien</h3><p>Streckenmaut, Klasse nach Achsen und Höhe an der Vorderachse.</p></a>
+</div>
+</main>
+
+<footer><div class="wrap">Mautklar (Arbeitstitel) · Alle Angaben ohne Gewähr · <a href="/impressum/">Impressum und Datenschutz</a></div></footer>
+<script src="/js/maut-daten.js"></script>
+<script src="/js/rechner.js"></script>
+</body>
+</html>
