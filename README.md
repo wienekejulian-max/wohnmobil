@@ -6,11 +6,9 @@ Werkzeuge und Ratgeber für den Wohnmobil-Urlaub, Domain geplant: mein-wohnmobil
 
 | Pfad | Inhalt |
 | --- | --- |
-| `index.html` | Startseite mit Werkzeugen und Ratgeber-Themen |
-| `werkzeuge/` | Übersicht der Rechner; `werkzeuge/maut-rechner/` ist der Maut-Rechner |
-| `maut/` | Maut-Ratgeber mit je einer Seite pro Land (AT, CH, FR, IT) |
-| `ratgeber/` | Themen: Maut, Gewicht und Zuladung, Mieten, Fahren im Ausland |
-| `reiseberichte/` | Plätze aus eigener Erfahrung (noch leer) |
+| `index.html` | Startseite mit Einleitung und Länderübersicht |
+| `werkzeuge/maut-rechner/` | Der Maut-Rechner |
+| `maut/` | Übersicht und je eine Seite pro Land (AT, CH, FR, IT) |
 | `quellen/` | Alle Mautwerte mit Herkunft und Prüfdatum |
 | `ueber/`, `impressum/` | Weitere Seiten |
 | `css/style.css` | Gestaltung aller Seiten |
@@ -19,7 +17,9 @@ Werkzeuge und Ratgeber für den Wohnmobil-Urlaub, Domain geplant: mein-wohnmobil
 | `js/rechner.js` | Formular und Ergebnis des Rechners |
 | `js/laenderseite.js` | Füllt Länderseiten und die Quellen-Seite aus den Daten |
 
-`/werkzeuge/maut-rechner/?land=at` öffnet den Rechner nur mit diesem Land (so verlinken die Länderseiten). Alte Adressen unter `/laender/` leitet `netlify.toml` auf `/maut/` um.
+`/werkzeuge/maut-rechner/?land=at` öffnet den Rechner nur mit diesem Land (so verlinken die Länderseiten). Alte Adressen unter `/laender/` und die noch leeren Bereiche (`/werkzeuge/`, `/ratgeber/`, `/reiseberichte/`) leitet `netlify.toml` um.
+
+Was inhaltlich noch kommt, steht in [THEMENPLAN.md](THEMENPLAN.md). Auf der Seite steht nur, was fertig ist.
 
 ## Datenpflege
 

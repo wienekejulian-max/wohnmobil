@@ -7,3 +7,19 @@
   from = "/laender/*"
   to = "/maut/:splat"
   status = 301
+
+# Bereiche, die erst mit fertigen Inhalten wiederkommen (siehe THEMENPLAN.md)
+[[redirects]]
+  from = "/werkzeuge/"
+  to = "/werkzeuge/maut-rechner/"
+  status = 302
+
+[[redirects]]
+  from = "/ratgeber/*"
+  to = "/maut/"
+  status = 302
+
+[[redirects]]
+  from = "/reiseberichte/*"
+  to = "/"
+  status = 302
