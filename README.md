@@ -22,6 +22,13 @@ Werkzeuge und Ratgeber für den Wohnmobil-Urlaub, Domain geplant: mein-wohnmobil
 
 Was inhaltlich noch kommt, steht in [THEMENPLAN.md](THEMENPLAN.md). Auf der Seite steht nur, was fertig ist.
 
+## Arbeitsweise und Netlify-Credits
+
+Der kostenlose Netlify-Tarif hat 300 Credits im Monat, jede Veröffentlichung von `main` kostet 15 Credits. Deshalb:
+
+- Änderungen kommen zuerst auf den Zweig `entwurf`. Netlify baut davon kostenlos eine Vorschau unter `entwurf--<seitenname>.netlify.app`.
+- Nach `main` (die echte Seite) wird nur gebündelt übernommen, wenige Male im Monat.
+
 ## Datenpflege
 
 Jeder Wert in `js/maut-daten.js` hat eine Art (`amtlich`, `sekundaer`, `schaetzung`) und eine Quelle. Rechner, Länderseiten und die Quellen-Seite zeigen beides an. Wird ein Wert geändert, ändert er sich überall.
