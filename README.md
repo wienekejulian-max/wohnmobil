@@ -1,22 +1,25 @@
-# Mautklar (Arbeitstitel)
+# Mein Wohnmobil-Urlaub
 
-Maut-Rechner und Länderseiten für Wohnmobile. Reine statische Seite (HTML, CSS, JavaScript) ohne Build-Schritt, veröffentlicht über Netlify.
+Werkzeuge und Ratgeber für den Wohnmobil-Urlaub, Domain geplant: mein-wohnmobil-urlaub.de. Reine statische Seite (HTML, CSS, JavaScript) ohne Build-Schritt, veröffentlicht über Netlify.
 
 ## Aufbau
 
 | Pfad | Inhalt |
 | --- | --- |
-| `index.html` | Startseite mit dem Maut-Rechner |
-| `laender/` | Übersicht und je eine Seite pro Land (AT, CH, FR, IT) |
-| `quellen/` | Alle Werte mit Herkunft und Prüfdatum |
-| `ratgeber/`, `ueber/`, `impressum/` | Weitere Seiten |
+| `index.html` | Startseite mit Werkzeugen und Ratgeber-Themen |
+| `werkzeuge/` | Übersicht der Rechner; `werkzeuge/maut-rechner/` ist der Maut-Rechner |
+| `maut/` | Maut-Ratgeber mit je einer Seite pro Land (AT, CH, FR, IT) |
+| `ratgeber/` | Themen: Maut, Gewicht und Zuladung, Mieten, Fahren im Ausland |
+| `reiseberichte/` | Plätze aus eigener Erfahrung (noch leer) |
+| `quellen/` | Alle Mautwerte mit Herkunft und Prüfdatum |
+| `ueber/`, `impressum/` | Weitere Seiten |
 | `css/style.css` | Gestaltung aller Seiten |
 | `js/maut-daten.js` | **Alle Preise, Regeln und Quellen. Die einzige Stelle, an der Zahlen stehen.** |
 | `js/maut-regeln.js` | Rechenregeln je Land und die Tabellen der Länderseiten |
 | `js/rechner.js` | Formular und Ergebnis des Rechners |
 | `js/laenderseite.js` | Füllt Länderseiten und die Quellen-Seite aus den Daten |
 
-`/?land=at` öffnet den Rechner nur mit diesem Land (so verlinken die Länderseiten).
+`/werkzeuge/maut-rechner/?land=at` öffnet den Rechner nur mit diesem Land (so verlinken die Länderseiten). Alte Adressen unter `/laender/` leitet `netlify.toml` auf `/maut/` um.
 
 ## Datenpflege
 

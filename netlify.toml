@@ -1,3 +1,9 @@
 # Statische Seite ohne Build-Schritt: Netlify veröffentlicht den Ordner so, wie er ist.
 [build]
   publish = "."
+
+# Alte Adressen aus dem ersten Entwurf
+[[redirects]]
+  from = "/laender/*"
+  to = "/maut/:splat"
+  status = 301
