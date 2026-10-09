@@ -137,3 +137,4 @@ ul.quellen { margin: 6px 0 0; padding-left: 18px; font-size: 14px; display: grid
 .perks li { display: grid; gap: 2px; padding-left: 14px; border-left: 3px solid var(--vignette); }
 .perks b { font-family: var(--display); font-size: 20px; }
 .perks span { color: var(--muted); }
+.legal h2 { font-size: 22px; margin-top: 24px; }

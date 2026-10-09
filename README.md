@@ -10,7 +10,8 @@ Werkzeuge und Ratgeber für den Wohnmobil-Urlaub, Domain geplant: mein-wohnmobil
 | `werkzeuge/maut-rechner/` | Der Maut-Rechner |
 | `maut/` | Übersicht und je eine Seite pro Land (AT, CH, FR, IT) |
 | `quellen/` | Alle Mautwerte mit Herkunft und Prüfdatum |
-| `ueber/`, `impressum/` | Weitere Seiten |
+| `ueber/`, `impressum/`, `datenschutz/` | Weitere Seiten |
+| `fonts/`, `css/fonts.css` | Schriften lokal eingebunden, damit beim Aufruf keine Daten an Google gehen |
 | `css/style.css` | Gestaltung aller Seiten |
 | `js/maut-daten.js` | **Alle Preise, Regeln und Quellen. Die einzige Stelle, an der Zahlen stehen.** |
 | `js/maut-regeln.js` | Rechenregeln je Land und die Tabellen der Länderseiten |
@@ -55,7 +56,8 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 - Offene Punkte bei den Daten klären.
 - Entwurfs-Hinweis oben auf jeder Seite entfernen.
 - `<meta name="robots" content="noindex">` aus allen Seiten entfernen, damit Google die Seite aufnimmt.
-- Impressum und Datenschutzerklärung ausfüllen.
+- E-Mail-Adresse in Impressum und Datenschutzerklärung eintragen.
+- Datenschutzerklärung prüfen, wenn neue Dienste dazukommen (z. B. Statistik, Werbung, Affiliate-Links).
 
 ## Lokal ansehen
 
