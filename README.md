@@ -68,7 +68,7 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 - Offene Punkte bei den Daten klären.
 - Entwurfs-Hinweis oben auf jeder Seite entfernen.
 - `<meta name="robots" content="noindex">` aus allen Seiten entfernen, damit Google die Seite aufnimmt.
-- Umami: Website-ID eintragen (alle Seiten bekommen das Skript im `<head>`), in Umami Cloud den Auftragsverarbeitungsvertrag (DPA) abschließen. Gezählt wird nur auf mein-wohnmobil-urlaub.de, nicht in der Vorschau.
+- Umami: Skript ist auf allen Seiten (eigenes kostenloses Umami-Cloud-Konto). Prüfen, dass der Auftragsverarbeitungsvertrag (DPA) für dieses Konto abgeschlossen ist. Gezählt wird nur auf mein-wohnmobil-urlaub.de, nicht in der Vorschau.
 - Datenschutzerklärung prüfen, wenn neue Dienste dazukommen (z. B. Statistik, Werbung, Affiliate-Links).
 
 ## Lokal ansehen
