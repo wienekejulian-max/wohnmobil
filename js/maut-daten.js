@@ -67,7 +67,7 @@
         vignetteChf: v(40, "amtlich", "via"),
         // gilt für Wohnmobile über 3,5 t Gesamtgewicht laut Fahrzeugausweis
         psva: {
-          tagChf: v(3.25, "sekundaer", "adac"),
+          tagChf: v(3.25, "amtlich", "via"),
           minChf: v(25, "amtlich", "bazg"),
           maxBis30TageChf: v(58.50, "sekundaer", "adac"),
           monatChf: v(58.50, "sekundaer", "adac"),
