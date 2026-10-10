@@ -71,7 +71,7 @@
           minChf: v(25, "amtlich", "bazg"),
           maxBis30TageChf: v(58.50, "sekundaer", "adac"),
           monatChf: v(58.50, "amtlich", "via"),
-          jahrChf: v(650, "sekundaer", "adac")
+          jahrChf: v(650, "amtlich", "via")
         }
       },
 
