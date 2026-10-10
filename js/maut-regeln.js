@@ -160,5 +160,8 @@
     return q ? `${art} <a href="${q.url}" target="_blank" rel="noopener">Quelle</a>` : art;
   }
 
-  window.MAUT = { D, L, REGELN, TABELLEN, eur, komma, datum, quelleHtml, ART };
+  // Hinweis unter Ergebnissen und Tabellen
+  const fehlerHinweis = () => `<p class="fehler-hinweis">Fehler gefunden oder ein Preis hat sich geändert? Schreib uns an <a href="mailto:${D.kontakt}">${D.kontakt}</a>.</p>`;
+
+  window.MAUT = { fehlerHinweis, D, L, REGELN, TABELLEN, eur, komma, datum, quelleHtml, ART };
 })();

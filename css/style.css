@@ -105,6 +105,7 @@ footer a { color: inherit; }
 .check { display: flex; gap: 8px; align-items: center; margin-top: 10px; font-size: 15px; cursor: pointer; }
 .check input { width: 18px; height: 18px; accent-color: var(--sign); }
 .card p.stand { font-size: 13px; color: var(--muted); }
+.fehler-hinweis { font-size: 14px; color: var(--muted); margin-top: 16px; }
 .art { font-size: 12px; font-weight: 600; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--line); white-space: nowrap; }
 .art-amtlich { color: var(--ok); border-color: currentColor; }
 .art-sekundaer { color: var(--muted); }

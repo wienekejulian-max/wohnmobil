@@ -56,7 +56,7 @@
         <p>${r.text}</p>${r.hinweis ? `<p class="note">${r.hinweis}</p>` : ""}
         <p class="stand"><span class="art art-${art}">${ART[art]}</span> Stand ${datum(L[k].geprueft)} · <a href="/quellen/#${k}">Quellen</a></p></div>`;
     }
-    $("res").innerHTML = html || "<p>Wähle mindestens ein Land aus.</p>";
+    $("res").innerHTML = html ? html + window.MAUT.fehlerHinweis() : "<p>Wähle mindestens ein Land aus.</p>";
     const s = summe(v, tage);
     $("sum").textContent = eur(s);
     $("sumNote").textContent = n ? `${n} ${n > 1 ? "Länder" : "Land"}, ${tage} Tage` : "";

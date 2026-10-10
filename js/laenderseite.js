@@ -18,7 +18,7 @@
   // Länderseite: <div data-regeln="at"> und <span data-stand="at">
   document.querySelectorAll("[data-regeln]").forEach((el) => { el.innerHTML = tabelle(el.dataset.regeln); });
   document.querySelectorAll("[data-stand]").forEach((el) => { el.textContent = datum(L[el.dataset.stand].geprueft); });
-  document.querySelectorAll("[data-quellen]").forEach((el) => { el.innerHTML = quellenListe(el.dataset.quellen); });
+  document.querySelectorAll("[data-quellen]").forEach((el) => { el.innerHTML = quellenListe(el.dataset.quellen) + window.MAUT.fehlerHinweis(); });
 
   // Seite "Quellen und Stand": alle Länder untereinander
   const alle = document.getElementById("alle-quellen");
@@ -29,6 +29,6 @@
         <p>Zuletzt geprüft: <b>${datum(L[k].geprueft)}</b>. Nächste Prüfung: ${L[k].naechstePruefung}</p>
         ${tabelle(k)}
         <h3>Quellen</h3>${quellenListe(k)}
-      </section>`).join("");
+      </section>`).join("") + window.MAUT.fehlerHinweis();
   }
 })();

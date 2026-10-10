@@ -56,7 +56,7 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 
 - Feste Preise (Vignette, Streckenmaut, Tagespauschalen) gehen nur mit amtlicher Quelle live. Kommt die Seite der Behörde nicht direkt heran, reicht ein Screenshot der amtlichen Seite mit Datum.
 - Schätzwerte (z. B. km-Sätze in Frankreich und Italien) sind erlaubt, wenn sie als Schätzung markiert sind und auf den amtlichen Rechner verlinken.
-- Sobald es eine E-Mail-Adresse gibt, kommt ein Hinweis „Fehler gefunden?“ auf Rechner und Länderseiten.
+- Unter Rechner, Länderseiten und Quellen steht ein Hinweis „Fehler gefunden?“ mit der Kontaktadresse aus `js/maut-daten.js`.
 
 ### Offene Punkte bei den Daten
 
@@ -68,7 +68,6 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 - Offene Punkte bei den Daten klären.
 - Entwurfs-Hinweis oben auf jeder Seite entfernen.
 - `<meta name="robots" content="noindex">` aus allen Seiten entfernen, damit Google die Seite aufnimmt.
-- E-Mail-Adresse in Impressum und Datenschutzerklärung eintragen.
 - Datenschutzerklärung prüfen, wenn neue Dienste dazukommen (z. B. Statistik, Werbung, Affiliate-Links).
 
 ## Lokal ansehen

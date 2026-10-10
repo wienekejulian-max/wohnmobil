@@ -15,6 +15,7 @@
 
   window.MAUT_DATEN = {
     stand: "2026-10-10",
+    kontakt: "info@mein-wohnmobil-urlaub.de",
     chfInEuro: v(1.07, "schaetzung", null),
 
     laender: {
