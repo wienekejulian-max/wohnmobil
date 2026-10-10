@@ -27,7 +27,7 @@
           goTarife: { titel: "GO-Maut-Tarife 2026 (go-maut.at)", url: "https://www.go-maut.at/en/paying-the-go-toll/go-toll-rates" },
           goWomo: { titel: "GO-Maut für schwere Wohnmobile (go-maut.at)", url: "https://www.go-maut.at/en/our-go-toll-system/go-toll-in-3-steps/go-toll-for-heavy-motorhomes" },
           tzgm: { titel: "ADAC: Mehr Wohnmobile brauchen die GO-Box", url: "https://www.adac.de/news/maut-oesterreich-wohnmobile/" },
-          strecke: { titel: "auto motor und sport: Streckenmaut 2026", url: "https://www.auto-motor-und-sport.de/verkehr/brenner-und-tauern-autobahn-und-co-ab-2026-hoehere-streckenmaut/" }
+          strecke: { titel: "ASFINAG: Streckenmaut 2026, Einzelfahrt bis 3,5 t (amtlich)", url: "https://www.asfinag.at/maut-vignette/streckenmaut/" }
         },
         vignette: {
           tag1: v(9.60, "amtlich", "asfinag"),
@@ -50,8 +50,13 @@
           uebergangBis: v("2029-01-31", "sekundaer", "tzgm")
         },
         streckenmaut: {
-          brenner: v(12.50, "sekundaer", "strecke"),
-          tauern: v(15.00, "sekundaer", "strecke")
+          brenner: v(12.50, "amtlich", "strecke"),
+          tauern: v(15.00, "amtlich", "strecke"),
+          arlberg: v(13.00, "amtlich", "strecke"),
+          karawankenSued: v(9.00, "amtlich", "strecke"),
+          pyhrnBeide: v(19.00, "amtlich", "strecke"),
+          bosruck: v(7.00, "amtlich", "strecke"),
+          gleinalm: v(12.00, "amtlich", "strecke")
         }
       },
 

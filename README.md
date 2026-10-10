@@ -60,7 +60,7 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 
 ### Offene Punkte bei den Daten
 
-- Österreich: Streckenmaut (A13 Brenner, A10 Tauern) amtlich bei ASFINAG bestätigen. Vignettenpreise sind seit 10.10.2026 amtlich bestätigt.
+- Österreich und Schweiz sind seit 10.10.2026 vollständig amtlich bestätigt, bis auf die Übergangsregel für abgelastete Wohnmobile (Österreich).
 - Frankreich und Italien: Die km-Preise sind Durchschnitte. Genauer wird es erst mit Preisen pro Strecke.
 
 ## Vor dem Livegang

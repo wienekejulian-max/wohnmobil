@@ -30,7 +30,7 @@
             (tage > 1 && 2 * d.vignette.tag1.w < wert.w
               ? `Fährst du nur an zwei Tagen hin und zurück durch, reichen zwei 1-Tages-Vignetten für ${eur(2 * d.vignette.tag1.w)}. `
               : "") +
-            `Sondermaut extra: Brenner ${eur(d.streckenmaut.brenner.w)}, Tauern ${eur(d.streckenmaut.tauern.w)} pro Fahrt.`
+            `Sondermaut extra pro Fahrt: Brenner ${eur(d.streckenmaut.brenner.w)}, Tauern ${eur(d.streckenmaut.tauern.w)}, Arlberg ${eur(d.streckenmaut.arlberg.w)}, Karawanken ${eur(d.streckenmaut.karawankenSued.w)}, Pyhrn ${eur(d.streckenmaut.pyhrnBeide.w)}.`
         };
       }
       const satz = v.achsen >= 4 ? d.goMaut.achsen4 : v.achsen === 3 ? d.goMaut.achsen3 : d.goMaut.achsen2;
@@ -113,7 +113,12 @@
         ["F.1 über 3,5 t", "Bearbeitungsgebühr GO-Box", d.goBoxGebuehr, eur(d.goBoxGebuehr.w)],
         ["Abgelastet, vor dem " + datum(d.regelTzgm.stichtagErstzulassung.w) + " zugelassen", "Noch Vignette, Übergang bis", d.regelTzgm.uebergangBis, datum(d.regelTzgm.uebergangBis.w)],
         ["Sondermaut bis 3,5 t", "A13 Brenner, Einzelfahrt", d.streckenmaut.brenner, eur(d.streckenmaut.brenner.w)],
-        ["Sondermaut bis 3,5 t", "A10 Tauern, Einzelfahrt", d.streckenmaut.tauern, eur(d.streckenmaut.tauern.w)]
+        ["Sondermaut bis 3,5 t", "A10 Tauern, Einzelfahrt", d.streckenmaut.tauern, eur(d.streckenmaut.tauern.w)],
+        ["Sondermaut bis 3,5 t", "S16 Arlbergtunnel, Einzelfahrt", d.streckenmaut.arlberg, eur(d.streckenmaut.arlberg.w)],
+        ["Sondermaut bis 3,5 t", "A11 Karawankentunnel, nur Richtung Süden (Richtung Norden kassiert Slowenien)", d.streckenmaut.karawankenSued, eur(d.streckenmaut.karawankenSued.w)],
+        ["Sondermaut bis 3,5 t", "A9 Pyhrn, Bosruck und Gleinalm zusammen", d.streckenmaut.pyhrnBeide, eur(d.streckenmaut.pyhrnBeide.w)],
+        ["Sondermaut bis 3,5 t", "A9 nur Bosrucktunnel", d.streckenmaut.bosruck, eur(d.streckenmaut.bosruck.w)],
+        ["Sondermaut bis 3,5 t", "A9 nur Gleinalmtunnel", d.streckenmaut.gleinalm, eur(d.streckenmaut.gleinalm.w)]
       ];
     },
     ch: () => {
