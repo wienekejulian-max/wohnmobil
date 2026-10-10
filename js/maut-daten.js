@@ -60,7 +60,6 @@
         geprueft: "2026-10-10",
         naechstePruefung: "Einmal im Jahr im Herbst. Die Vignette kostet seit Jahren 40 CHF, die PSVA ändert sich selten.",
         quellen: {
-          adac: { titel: "ADAC: Schwerverkehrsabgabe Schweiz", url: "https://www.adac.de/fahrzeugwelt/maut-vignette/schweiz/schwerverkehrsabgabe/" },
           bazg: { titel: "BAZG: Merkblatt PSVA 2026 (amtlich)", url: "https://www.bazg.admin.ch/dam/de/sd-web/OeCLGLxjWhTI/Form_1594_Merkblatt_PSVA_2026.pdf" },
           via: { titel: "Via-Portal (BAZG): E-Vignette 2026 für 40 CHF, PSVA bezahlen (amtlich)", url: "https://via.admin.ch" }
         },
@@ -69,7 +68,7 @@
         psva: {
           tagChf: v(3.25, "amtlich", "via"),
           minChf: v(25, "amtlich", "bazg"),
-          maxBis30TageChf: v(58.50, "sekundaer", "adac"),
+          maxBis30TageChf: v(58.50, "amtlich", "via"),
           monatChf: v(58.50, "amtlich", "via"),
           jahrChf: v(650, "amtlich", "via")
         }

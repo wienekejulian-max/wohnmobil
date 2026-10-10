@@ -63,10 +63,13 @@
         wie = betrag === p.jahrChf.w ? `Jahrespauschale ${chf(p.jahrChf.w)}.` : `${monate} Monate × ${chf(p.monatChf.w)}.`;
       }
       return {
-        preis: betrag * D.chfInEuro.w, werte: [p.tagChf, p.minChf, D.chfInEuro],
+        preis: betrag * D.chfInEuro.w, werte: [p.tagChf, p.minChf, p.maxBis30TageChf, D.chfInEuro],
         chips: [["", "PSVA"], ["", "über die Via-App"]],
         text: `${wie} Gerechnet mit ${tage} Tagen; bezahlt wird für jeden Tag in der Schweiz.`,
-        hinweis: "Keine Vignette nötig, die PSVA ersetzt sie."
+        hinweis: "Keine Vignette nötig, die PSVA ersetzt sie." +
+          (tage >= Math.ceil(p.maxBis30TageChf.w / p.tagChf.w) && tage <= 30
+            ? ` Ab ${Math.ceil(p.maxBis30TageChf.w / p.tagChf.w)} Tagen kostet es so viel wie ein Monat. Das Via-Portal stellt dir dann gleich ein Monatsticket aus, das einen vollen Monat gilt.`
+            : "")
       };
     },
 

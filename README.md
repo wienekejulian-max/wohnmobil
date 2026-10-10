@@ -61,7 +61,6 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 ### Offene Punkte bei den Daten
 
 - Österreich: Streckenmaut (A13 Brenner, A10 Tauern) amtlich bei ASFINAG bestätigen. Vignettenpreise sind seit 10.10.2026 amtlich bestätigt.
-- Schweiz: PSVA-Höchstbetrag für 1–30 Tage (58,50 CHF) im Via-Portal bestätigen. Alle übrigen CH-Werte sind seit 10.10.2026 amtlich.
 - Frankreich und Italien: Die km-Preise sind Durchschnitte. Genauer wird es erst mit Preisen pro Strecke.
 
 ## Vor dem Livegang
