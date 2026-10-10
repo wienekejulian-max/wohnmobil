@@ -52,9 +52,15 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 3. Wenn ein Wert amtlich bestätigt ist, `art` auf `"amtlich"` setzen und die amtliche Quelle eintragen.
 4. `geprueft` des Landes und `stand` oben auf das Prüfdatum setzen, `naechstePruefung` bei Bedarf anpassen.
 
+### Regel für Werte ohne amtliche Quelle
+
+- Feste Preise (Vignette, Streckenmaut, Tagespauschalen) gehen nur mit amtlicher Quelle live. Kommt die Seite der Behörde nicht direkt heran, reicht ein Screenshot der amtlichen Seite mit Datum.
+- Schätzwerte (z. B. km-Sätze in Frankreich und Italien) sind erlaubt, wenn sie als Schätzung markiert sind und auf den amtlichen Rechner verlinken.
+- Sobald es eine E-Mail-Adresse gibt, kommt ein Hinweis „Fehler gefunden?“ auf Rechner und Länderseiten.
+
 ### Offene Punkte bei den Daten
 
-- Österreich: Vignettenpreise und Streckenmaut amtlich bei ASFINAG bestätigen.
+- Österreich: Streckenmaut (A13 Brenner, A10 Tauern) amtlich bei ASFINAG bestätigen. Vignettenpreise sind seit 10.10.2026 amtlich bestätigt.
 - Schweiz: PSVA-Sätze im Via-Portal bestätigen.
 - Frankreich und Italien: Die km-Preise sind Durchschnitte. Genauer wird es erst mit Preisen pro Strecke.
 

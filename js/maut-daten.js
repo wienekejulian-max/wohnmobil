@@ -14,27 +14,26 @@
   const v = (w, art, q) => ({ w, art, q });
 
   window.MAUT_DATEN = {
-    stand: "2026-10-08",
+    stand: "2026-10-10",
     chfInEuro: v(1.07, "schaetzung", null),
 
     laender: {
       at: {
         name: "Österreich", code: "A", slug: "oesterreich",
-        geprueft: "2026-10-08",
+        geprueft: "2026-10-10",
         naechstePruefung: "Anfang Dezember: neue Vignette gilt ab 1. Dezember, GO-Maut und Streckenmaut ändern sich zum 1. Januar.",
         quellen: {
-          vignette: { titel: "Vignettenpreise 2026 (checkeverything.at, nach ASFINAG)", url: "https://www.checkeverything.at/de/blog/vignette-2026-2027-preise" },
-          asfinag: { titel: "ASFINAG: Vignette (amtlich, zum Gegenprüfen)", url: "https://www.asfinag.at/maut-vignette/vignette/" },
+          asfinag: { titel: "ASFINAG: Vignettenpreise 2026, gültig ab 1.12.2025 (amtlich)", url: "https://www.asfinag.at/maut-vignette/vignette/" },
           goTarife: { titel: "GO-Maut-Tarife 2026 (go-maut.at)", url: "https://www.go-maut.at/en/paying-the-go-toll/go-toll-rates" },
           goWomo: { titel: "GO-Maut für schwere Wohnmobile (go-maut.at)", url: "https://www.go-maut.at/en/our-go-toll-system/go-toll-in-3-steps/go-toll-for-heavy-motorhomes" },
           tzgm: { titel: "ADAC: Mehr Wohnmobile brauchen die GO-Box", url: "https://www.adac.de/news/maut-oesterreich-wohnmobile/" },
           strecke: { titel: "auto motor und sport: Streckenmaut 2026", url: "https://www.auto-motor-und-sport.de/verkehr/brenner-und-tauern-autobahn-und-co-ab-2026-hoehere-streckenmaut/" }
         },
         vignette: {
-          tag1: v(9.60, "sekundaer", "vignette"),
-          tag10: v(12.80, "sekundaer", "vignette"),
-          monat2: v(32.00, "sekundaer", "vignette"),
-          jahr: v(106.80, "sekundaer", "vignette")
+          tag1: v(9.60, "amtlich", "asfinag"),
+          tag10: v(12.80, "amtlich", "asfinag"),
+          monat2: v(32.00, "amtlich", "asfinag"),
+          jahr: v(106.80, "amtlich", "asfinag")
         },
         // € pro km inkl. 20 % USt, Euro 6, CO2-Klasse 1 (Nettotarif × 1,2)
         goMaut: {
