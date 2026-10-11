@@ -63,11 +63,13 @@ Die Länder ändern ihre Preise zu festen Terminen. Danach richtet sich die Prü
 - Österreich und Schweiz sind seit 10.10.2026 vollständig amtlich bestätigt, bis auf die Übergangsregel für abgelastete Wohnmobile (Österreich).
 - Frankreich und Italien: Die km-Preise sind Durchschnitte. Genauer wird es erst mit Preisen pro Strecke.
 
-## Vor dem Livegang
+## Live seit 11.10.2026
+
+Die Seite läuft unter https://mein-wohnmobil-urlaub.de (Netlify-Projekt „wohnmobilportal“, Domain bei IONOS).
+
+### Weiter beachten
 
 - Offene Punkte bei den Daten klären.
-- Entwurfs-Hinweis oben auf jeder Seite entfernen.
-- `<meta name="robots" content="noindex">` aus allen Seiten entfernen, damit Google die Seite aufnimmt.
 - Umami: Skript ist auf allen Seiten (eigenes kostenloses Umami-Cloud-Konto). Der Auftragsverarbeitungsvertrag (DPA, umami.is/dpa, inkl. EU-Standardvertragsklauseln) gilt laut Umami automatisch mit dem Konto. Gezählt wird nur auf mein-wohnmobil-urlaub.de, nicht in der Vorschau.
 - Datenschutzerklärung prüfen, wenn neue Dienste dazukommen (z. B. Statistik, Werbung, Affiliate-Links).
 
