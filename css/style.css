@@ -139,3 +139,12 @@ ul.quellen { margin: 6px 0 0; padding-left: 18px; font-size: 14px; display: grid
 .perks b { font-family: var(--display); font-size: 20px; }
 .perks span { color: var(--muted); }
 .legal h2 { font-size: 22px; margin-top: 24px; }
+
+/* Startseite: Überleitung und Schritte */
+.intro { max-width: 68ch; margin-top: 10px; }
+.intro p { margin: 0 0 12px; }
+.steps { list-style: none; counter-reset: s; padding: 0; margin: 16px 0 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.steps li { counter-increment: s; display: grid; align-content: start; gap: 4px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.steps li::before { content: counter(s); font-family: var(--display); font-size: 28px; font-weight: 700; line-height: 1; color: var(--vignette); }
+.steps b { font-family: var(--display); font-size: 19px; }
+.steps span { color: var(--muted); }
