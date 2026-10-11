@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mein-wohnmobil-urlaub.de/sitemap.xml

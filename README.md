@@ -71,6 +71,7 @@ Die Seite läuft unter https://mein-wohnmobil-urlaub.de (Netlify-Projekt „wohn
 
 - Offene Punkte bei den Daten klären.
 - Umami: Skript ist auf allen Seiten (eigenes kostenloses Umami-Cloud-Konto). Der Auftragsverarbeitungsvertrag (DPA, umami.is/dpa, inkl. EU-Standardvertragsklauseln) gilt laut Umami automatisch mit dem Konto. Gezählt wird nur auf mein-wohnmobil-urlaub.de, nicht in der Vorschau.
+- Neue Seiten in `sitemap.xml` eintragen (wird bei der Google Search Console eingereicht).
 - Datenschutzerklärung prüfen, wenn neue Dienste dazukommen (z. B. Statistik, Werbung, Affiliate-Links).
 
 ## Lokal ansehen
