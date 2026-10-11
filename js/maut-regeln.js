@@ -7,6 +7,7 @@
   const komma = (n, stellen = 2) => n.toFixed(stellen).replace(".", ",");
   const eur = (n) => n.toLocaleString("de-DE", { style: "currency", currency: "EUR", minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const chf = (n) => komma(n, n % 1 ? 2 : 0) + " CHF";
+  const umgerechnet = (betragChf) => `Du zahlst ${chf(betragChf)}, das sind umgerechnet etwa ${eur(betragChf * D.chfInEuro.w)} (Kurs geschätzt: 1 CHF ≈ ${komma(D.chfInEuro.w)} €).`;
   const datum = (iso) => iso.split("-").reverse().join(".");
 
   // Fahrzeug v: { f1: techn. zul. Gesamtmasse, f2: zul. Gesamtgewicht, hoehe, achsen, ezAlt: Erstzulassung vor Stichtag }
@@ -50,7 +51,7 @@
         return {
           preis: d.vignetteChf.w * D.chfInEuro.w, werte: [d.vignetteChf, D.chfInEuro],
           chips: [["vig", `Jahresvignette ${chf(d.vignetteChf.w)}`]],
-          text: "Gilt bis Ende Januar des Folgejahres.", hinweis: ""
+          text: `${umgerechnet(d.vignetteChf.w)} Gilt bis Ende Januar des Folgejahres.`, hinweis: ""
         };
       }
       let betrag, wie;
@@ -65,7 +66,7 @@
       return {
         preis: betrag * D.chfInEuro.w, werte: [p.tagChf, p.minChf, p.maxBis30TageChf, D.chfInEuro],
         chips: [["", "PSVA"], ["", "über die Via-App"]],
-        text: `${wie} Gerechnet mit ${tage} Tagen; bezahlt wird für jeden Tag in der Schweiz.`,
+        text: `${umgerechnet(betrag)} ${wie} Gerechnet mit ${tage} Tagen; bezahlt wird für jeden Tag in der Schweiz.`,
         hinweis: "Keine Vignette nötig, die PSVA ersetzt sie." +
           (tage >= Math.ceil(p.maxBis30TageChf.w / p.tagChf.w) && tage <= 30
             ? ` Ab ${Math.ceil(p.maxBis30TageChf.w / p.tagChf.w)} Tagen kostet es so viel wie ein Monat. Das Via-Portal stellt dir dann gleich ein Monatsticket aus, das einen vollen Monat gilt.`
