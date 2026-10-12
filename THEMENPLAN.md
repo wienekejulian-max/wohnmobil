@@ -6,7 +6,7 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 
 ## Werkzeuge
 
-- [x] Maut-Rechner (Österreich, Schweiz, Frankreich, Italien, Slowenien, Kroatien, Spanien)
+- [x] Maut-Rechner (Österreich, Schweiz, Frankreich, Italien, Kroatien)
 - [ ] Zuladungsrechner: Wie viel darf ich noch einpacken? Personen, Wasser, Gas, Fahrräder
 - [ ] Mietwohnmobil-Check: Darf ich das Mietmobil mit Führerschein B fahren, was kostet es mit Maut und Kilometern?
 - [ ] Reisekosten-Rechner: Diesel, Maut, Stellplätze und Fähre für eine Tour
@@ -14,7 +14,8 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 ## Ratgeber
 
 ### Maut und Vignetten
-- [x] Länderseiten Österreich, Schweiz, Frankreich, Italien, Slowenien, Kroatien, Spanien
+- [x] Länderseiten Österreich, Schweiz, Frankreich, Italien, Kroatien
+- [ ] Slowenien und Spanien (fertig vorbereitet auf Branch spaeter-slowenien-spanien-ratgeber; Slowenien braucht noch amtliche DARS-Preise)
 - [ ] Abgelastet auf 3,5 t: Warum Österreich trotzdem GO-Maut verlangt (F.1 statt F.2, Übergang bis 31.1.2029)
 - [ ] Mautbox fürs Wohnmobil: Lohnt sich das? (Bip&Go, Telepass und Co.)
 - [ ] Sondermaut-Strecken in Österreich (Brenner, Tauern, Arlberg)
@@ -26,7 +27,8 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 - [ ] Höhe richtig messen (Dachbox, Klimaanlage, Solar; wichtig für Frankreich)
 
 ### Wohnmobil mieten
-- [x] Ratgeber „Wohnmobil mieten“: Einstieg (/ratgeber/wohnmobil-mieten/) und 6 Unterseiten (Anbieter, Fahrzeug und Führerschein, Kosten, Versicherung, Buchen und Übergabe, Unterwegs)
+- [x] Übersichtsseite „Wohnmobil mieten“ (/ratgeber/wohnmobil-mieten/)
+- [ ] Ausführlicher Ratgeber mit Unterseiten (Anbieter, Fahrzeug und Führerschein, Kosten, Versicherung, Buchen und Übergabe, Unterwegs), fertig vorbereitet auf Branch spaeter-slowenien-spanien-ratgeber
 - [ ] Wohnmobil mieten mit Führerschein B (Vertiefung)
 - [ ] Vermieter und Portale im Vergleich (Partnerprogramme prüfen: PaulCamper, Yescapa, roadsurfer u. a.)
 - [ ] Was eine Mietreise wirklich kostet
