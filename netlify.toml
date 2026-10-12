@@ -14,9 +14,10 @@
   to = "/werkzeuge/maut-rechner/"
   status = 302
 
+# Es gibt noch keine Ratgeber-Übersicht, nur einzelne Ratgeber
 [[redirects]]
-  from = "/ratgeber/*"
-  to = "/maut/"
+  from = "/ratgeber/"
+  to = "/ratgeber/wohnmobil-mieten/"
   status = 302
 
 [[redirects]]
