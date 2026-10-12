@@ -113,6 +113,77 @@
           B: v(0.082, "schaetzung", "klassen"),
           3: v(0.105, "schaetzung", "klassen")
         }
+      },
+      si: {
+        name: "Slowenien", code: "SLO", slug: "slowenien",
+        geprueft: "2026-10-12",
+        naechstePruefung: "Im Dezember: DARS gibt die Vignettenpreise für das neue Jahr bekannt.",
+        quellen: {
+          dars: { titel: "DARS: E-Vignette, Klassen und Kauf (amtlich)", url: "https://evinjeta.dars.si/de/" },
+          adac: { titel: "ADAC: Maut und Vignette in Slowenien, Preise 2026", url: "https://www.adac.de/fahrzeugwelt/faq/faq-mautportal/faq-slowenien/" },
+          oeamtc: { titel: "ÖAMTC: Slowenien-Vignette, Wohnmobile in Klasse 2A", url: "https://www.oeamtc.at/thema/maut-vignette/die-slowenien-vignette-17577130" },
+          darsgo: { titel: "DarsGo: Maut über 3,5 t (amtlich)", url: "https://www.darsgo.si/" },
+          karawanken: { titel: "Camperstyle: Maut für Wohnmobile in Slowenien, Karawankentunnel", url: "https://www.camperstyle.de/maut-wohnmobil-slowenien-383245/" }
+        },
+        // e-Vignette bis 3,5 t zul. Gesamtgewicht. 2A = bis 1,30 m über der Vorderachse, 2B = höher.
+        // Wohnmobile mit fester Campingausstattung laut ÖAMTC immer 2A, bei DARS noch gegenprüfen.
+        vignette2A: {
+          tag7: v(16.00, "sekundaer", "adac"),
+          monat: v(32.00, "sekundaer", "adac"),
+          jahr: v(117.50, "sekundaer", "adac")
+        },
+        vignette2B: {
+          tag7: v(32.00, "sekundaer", "adac"),
+          monat: v(64.10, "sekundaer", "adac"),
+          jahr: v(235.00, "sekundaer", "adac")
+        },
+        womoIn2A: v(true, "sekundaer", "oeamtc"),
+        // über 3,5 t DarsGo, Mitte der Spanne 0,16 bis 0,25 €/km (2 Achsen, je nach Euro-Klasse)
+        darsGo: v(0.20, "schaetzung", "darsgo"),
+        karawankenNord: v(9.00, "sekundaer", "karawanken")
+      },
+
+      hr: {
+        name: "Kroatien", code: "HR", slug: "kroatien",
+        geprueft: "2026-10-12",
+        naechstePruefung: "Im Frühjahr 2027: Kroatien stellt auf Maut ohne Schranken um (geplant ab 1. März 2027).",
+        quellen: {
+          klassen: { titel: "HAC: Mautklassen und Tarife (amtlich)", url: "https://hac.hr/en/toll/toll-rates" },
+          a1: { titel: "HAC: Tarife A1 Zagreb–Split und A6 Zagreb–Rijeka (amtlich)", url: "https://hac.hr/en/toll/toll-rates/a1" }
+        },
+        // Streckenpreise aus der HAC-Tarifliste, € inkl. MwSt.
+        strecken: {
+          split: { I: v(26.40, "amtlich", "a1"), II: v(41.40, "amtlich", "a1"), III: v(55.20, "amtlich", "a1") },
+          rijeka: { I: v(10.10, "amtlich", "a1"), II: v(18.50, "amtlich", "a1"), III: v(22.50, "amtlich", "a1") },
+          zadar: { I: v(17.60, "amtlich", "a1"), II: v(28.20, "amtlich", "a1"), III: v(37.00, "amtlich", "a1") }
+        },
+        // €/km abgeleitet aus den drei Strecken (Zagreb–Split ca. 380 km, –Rijeka ca. 146 km, –Zadar ca. 285 km)
+        klassen: {
+          I: v(0.068, "schaetzung", "klassen"),
+          II: v(0.112, "schaetzung", "klassen"),
+          III: v(0.145, "schaetzung", "klassen")
+        }
+      },
+
+      es: {
+        name: "Spanien", code: "E", slug: "spanien",
+        geprueft: "2026-10-12",
+        naechstePruefung: "Im Januar: die Tarife ändern sich jedes Jahr zum 1. Januar. Die AP-68 Bilbao–Zaragoza wird am 11. November 2026 mautfrei.",
+        quellen: {
+          klassen: { titel: "BOE: Tarifklassen Ligeros und Pesados (amtlich)", url: "https://www.boe.es/boe/dias/2007/01/16/pdfs/A02242-02243.pdf" },
+          tarife: { titel: "Tolltickets: Mautstrecken und Preise in Spanien 2026", url: "https://www.tolltickets.com/blog/spain-toll-viat-guide/" }
+        },
+        // Ligeros aus AP-9 Coruña–Vigo, AP-68 Bilbao–Zaragoza und AP-7 Málaga–Estepona; Pesados 1 etwa das 1,6-Fache
+        klassen: {
+          ligeros: v(0.13, "schaetzung", "tarife"),
+          pesados1: v(0.21, "schaetzung", "tarife")
+        },
+        beispiele: {
+          corunaVigo: v(21.40, "sekundaer", "tarife"),
+          corunaSantiago: v(8.80, "sekundaer", "tarife"),
+          malagaEstepona: v(5.70, "sekundaer", "tarife"),
+          bilbaoZaragoza: v(39.90, "sekundaer", "tarife")
+        }
       }
     }
   };

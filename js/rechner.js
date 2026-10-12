@@ -5,7 +5,10 @@
   const LAENDER = Object.keys(REGELN);
 
   // Beispielroute München → Riva del Garda über den Brenner
-  const START = { at: { an: true, km: 110 }, ch: { an: false, km: 200 }, fr: { an: false, km: 600 }, it: { an: true, km: 150 } };
+  const START = {
+    at: { an: true, km: 110 }, ch: { an: false, km: 200 }, fr: { an: false, km: 600 }, it: { an: true, km: 150 },
+    si: { an: false, km: 200 }, hr: { an: false, km: 380 }, es: { an: false, km: 300 }
+  };
 
   // Länderzeilen im Formular; ?land=at wählt nur dieses Land vor
   const nurLand = new URLSearchParams(location.search).get("land");

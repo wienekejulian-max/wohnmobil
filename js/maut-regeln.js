@@ -92,8 +92,66 @@
         text: `${km} km × ca. ${komma(satz.w, 3)} €/km.`,
         hinweis: k === "B" ? "Wohnmobile und Campervans sind fast immer Klasse B (über 1,30 m an der Vorderachse)." : ""
       };
+    },
+    si(v, km, tage) {
+      const d = L.si;
+      if (v.f2 <= 3.5) {
+        const klasse = d.womoIn2A.w || v.hoehe <= 1.3 ? "2A" : "2B", vig = klasse === "2A" ? d.vignette2A : d.vignette2B;
+        const [name, wert] =
+          tage <= 7 ? ["7-Tages-Vignette", vig.tag7] :
+          tage <= 30 ? ["Monatsvignette", vig.monat] :
+          ["Jahresvignette", vig.jahr];
+        return {
+          preis: wert.w, werte: [wert, d.womoIn2A],
+          chips: [["vig", `${name} ${klasse}`]],
+          text: "Pauschal, egal wie viele Kilometer. Die E-Vignette kaufst du vor der Fahrt online bei DARS.",
+          hinweis: "Wohnmobile mit fest eingebauter Campingausstattung zählen in Klasse 2A, auch wenn sie höher als 1,30 m sind. " +
+            `Ohne feste Ausstattung, etwa ein Kastenwagen ohne Umbau-Eintrag, gilt Klasse 2B für ${eur(d.vignette2B.tag7.w)} (7 Tage). ` +
+            `Der Karawankentunnel kostet Richtung Norden ${eur(d.karawankenNord.w)} extra.`
+        };
+      }
+      return {
+        preis: km * d.darsGo.w, werte: [d.darsGo],
+        chips: [["km", "DarsGo"], ["", "DarsGo-Box nötig"]],
+        text: `${km} km × ca. ${komma(d.darsGo.w)} €/km (${v.achsen} Achsen).`,
+        hinweis: "Über 3,5 t brauchst du statt der Vignette die DarsGo-Box. Der Preis hängt von Achsen und Euro-Klasse ab, etwa 0,16 bis 0,25 €/km."
+      };
+    },
+
+    hr(v, km) {
+      const k = klasseHr(v), satz = L.hr.klassen[k];
+      return {
+        preis: km * satz.w, werte: [satz],
+        chips: [["km", "Klasse " + k], ["", "Bezahlen an der Mautstelle"]],
+        text: `${km} km × ca. ${komma(satz.w, 3)} €/km.`,
+        hinweis: k === "II"
+          ? `Wohnmobile bis 3,5 t sind fast immer Klasse II (über 1,90 m hoch). Zagreb–Split kostet in Klasse II ${eur(L.hr.strecken.split.II.w)}.`
+          : k === "III" ? `Über 3,5 t gilt Klasse III. Zagreb–Split kostet dann ${eur(L.hr.strecken.split.III.w)}.` : ""
+      };
+    },
+
+    es(v, km) {
+      const schwer = klasseEs(v) === "pesados1", satz = schwer ? L.es.klassen.pesados1 : L.es.klassen.ligeros;
+      return {
+        preis: km * satz.w, werte: [satz],
+        chips: [["km", schwer ? "Pesados 1" : "Ligeros"], ["", "Via-T optional"]],
+        text: `${km} km × ca. ${komma(satz.w)} €/km, nur für die Kilometer auf mautpflichtigen Autobahnen (AP).`,
+        hinweis: "Die meisten Autobahnen in Spanien sind mautfrei, trage nur die AP-Strecken ein. " +
+          (schwer
+            ? "Über 3,5 t oder mit 3 Achsen haben Wohnmobile meist Zwillingsreifen hinten und zahlen Pesados 1."
+            : "Hat dein Wohnmobil Zwillingsreifen an der Hinterachse, gilt Pesados 1 und es wird etwa 60 % teurer.")
+      };
     }
   };
+
+  function klasseHr(v) {
+    if (v.f2 > 3.5) return "III";
+    return v.hoehe <= 1.9 ? "I" : "II";
+  }
+
+  function klasseEs(v) {
+    return v.f2 > 3.5 || v.achsen >= 3 ? "pesados1" : "ligeros";
+  }
 
   function klasseFr(v) {
     if (v.f2 > 3.5 || v.hoehe >= 3) return v.achsen >= 3 ? 4 : 3;
@@ -148,6 +206,44 @@
         ["Klasse A", "2 Achsen, bis 1,30 m an der Vorderachse", k.A, "ca. " + komma(k.A.w, 3) + " €/km"],
         ["Klasse B", "2 Achsen, über 1,30 m an der Vorderachse (Wohnmobile)", k.B, "ca. " + komma(k.B.w, 3) + " €/km"],
         ["Klasse 3", "3 Achsen", k[3], "ca. " + komma(k[3].w, 3) + " €/km"]
+      ];
+    },
+    si: () => {
+      const d = L.si, a = d.vignette2A, b = d.vignette2B;
+      return [
+        ["Bis 3,5 t, Klasse 2A (Wohnmobile)", "E-Vignette, 7 Tage", a.tag7, eur(a.tag7.w)],
+        ["Bis 3,5 t, Klasse 2A (Wohnmobile)", "E-Vignette, 1 Monat", a.monat, eur(a.monat.w)],
+        ["Bis 3,5 t, Klasse 2A (Wohnmobile)", "E-Vignette, 1 Jahr", a.jahr, eur(a.jahr.w)],
+        ["Bis 3,5 t, Klasse 2B", "E-Vignette, 7 Tage", b.tag7, eur(b.tag7.w)],
+        ["Bis 3,5 t, Klasse 2B", "E-Vignette, 1 Monat", b.monat, eur(b.monat.w)],
+        ["Bis 3,5 t, Klasse 2B", "E-Vignette, 1 Jahr", b.jahr, eur(b.jahr.w)],
+        ["Über 3,5 t", "DarsGo, 2 Achsen, je nach Euro-Klasse", d.darsGo, "ca. 0,16 bis 0,25 €/km"],
+        ["Bis 3,5 t", "Karawankentunnel Richtung Norden, Einzelfahrt", d.karawankenNord, eur(d.karawankenNord.w)]
+      ];
+    },
+    hr: () => {
+      const s = L.hr.strecken, k = L.hr.klassen;
+      return [
+        ["Klasse I", "2 Achsen, bis 1,90 m hoch, Zagreb–Split", s.split.I, eur(s.split.I.w)],
+        ["Klasse II", "2 Achsen, über 1,90 m und bis 3,5 t (Wohnmobile), Zagreb–Split", s.split.II, eur(s.split.II.w)],
+        ["Klasse II", "Zagreb–Rijeka", s.rijeka.II, eur(s.rijeka.II.w)],
+        ["Klasse II", "Zagreb–Zadar", s.zadar.II, eur(s.zadar.II.w)],
+        ["Klasse III", "2 oder 3 Achsen über 3,5 t, Zagreb–Split", s.split.III, eur(s.split.III.w)],
+        ["Klasse III", "Zagreb–Rijeka", s.rijeka.III, eur(s.rijeka.III.w)],
+        ["Klasse III", "Zagreb–Zadar", s.zadar.III, eur(s.zadar.III.w)],
+        ["Klasse II", "Durchschnitt pro km", k.II, "ca. " + komma(k.II.w, 3) + " €/km"],
+        ["Klasse III", "Durchschnitt pro km", k.III, "ca. " + komma(k.III.w, 3) + " €/km"]
+      ];
+    },
+    es: () => {
+      const k = L.es.klassen, b = L.es.beispiele;
+      return [
+        ["Ligeros", "2 Achsen, ohne Zwillingsreifen, Durchschnitt", k.ligeros, "ca. " + komma(k.ligeros.w) + " €/km"],
+        ["Pesados 1", "Zwillingsreifen hinten oder 3 Achsen, Durchschnitt", k.pesados1, "ca. " + komma(k.pesados1.w) + " €/km"],
+        ["Ligeros", "AP-9 A Coruña–Vigo", b.corunaVigo, eur(b.corunaVigo.w)],
+        ["Ligeros", "AP-9 A Coruña–Santiago", b.corunaSantiago, eur(b.corunaSantiago.w)],
+        ["Ligeros", "AP-7 Málaga–Estepona, Nebensaison", b.malagaEstepona, eur(b.malagaEstepona.w)],
+        ["Ligeros", "AP-68 Bilbao–Zaragoza, mautfrei ab 11.11.2026", b.bilbaoZaragoza, eur(b.bilbaoZaragoza.w)]
       ];
     }
   };
