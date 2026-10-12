@@ -26,7 +26,7 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 - [ ] Höhe richtig messen (Dachbox, Klimaanlage, Solar; wichtig für Frankreich)
 
 ### Wohnmobil mieten
-- [x] Ratgeber „Wohnmobil mieten“ für Einsteiger (/ratgeber/wohnmobil-mieten/), deckt Führerschein B und Kosten im Überblick ab
+- [x] Ratgeber „Wohnmobil mieten“: Einstieg (/ratgeber/wohnmobil-mieten/) und 6 Unterseiten (Anbieter, Fahrzeug und Führerschein, Kosten, Versicherung, Buchen und Übergabe, Unterwegs)
 - [ ] Wohnmobil mieten mit Führerschein B (Vertiefung)
 - [ ] Vermieter und Portale im Vergleich (Partnerprogramme prüfen: PaulCamper, Yescapa, roadsurfer u. a.)
 - [ ] Was eine Mietreise wirklich kostet

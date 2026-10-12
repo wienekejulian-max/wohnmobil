@@ -163,3 +163,12 @@ ul.checkliste li::before { content: ""; position: absolute; left: 2px; top: 3px;
 ul.kurz { padding-left: 18px; margin: 6px 0 0; }
 ul.kurz li { margin: 4px 0; }
 .prose h2[id] { scroll-margin-top: 16px; }
+ol.rg-nav { list-style: none; padding: 0; margin: 6px 0 0; }
+ol.rg-nav li { margin: 2px 0; }
+ol.rg-nav a { display: block; padding: 5px 8px; border-radius: 6px; text-decoration: none; }
+ol.rg-nav a:hover { background: var(--bg); }
+ol.rg-nav li[aria-current] a { font-weight: 600; background: var(--bg); }
+.weiter { margin: 28px 0 8px; }
+ul.kurz-liste { padding-left: 20px; max-width: 70ch; }
+ul.kurz-liste li { margin: 6px 0; }
+@media (min-width: 821px) { .grid4.rg-tiles { grid-template-columns: repeat(3, 1fr); } }
