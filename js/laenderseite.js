@@ -20,6 +20,17 @@
   document.querySelectorAll("[data-stand]").forEach((el) => { el.textContent = datum(L[el.dataset.stand].geprueft); });
   document.querySelectorAll("[data-quellen]").forEach((el) => { el.innerHTML = quellenListe(el.dataset.quellen) + window.MAUT.fehlerHinweis(); });
 
+  // Preise im Fließtext: <span data-wert="at:streckenmaut.brenner"></span>
+  // Mehrere Werte werden addiert, "*2" verdoppelt: data-wert="at:vignette.tag10+streckenmaut.brenner*2"
+  document.querySelectorAll("[data-wert]").forEach((el) => {
+    const [land, formel] = el.dataset.wert.split(":");
+    const summe = formel.split("+").reduce((s, teil) => {
+      const [pfad, faktor] = teil.split("*");
+      return s + pfad.split(".").reduce((o, k) => o[k], L[land]).w * (Number(faktor) || 1);
+    }, 0);
+    el.textContent = window.MAUT.eur(summe);
+  });
+
   // Seite "Quellen und Stand": alle Länder untereinander
   const alle = document.getElementById("alle-quellen");
   if (alle) {

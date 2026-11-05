@@ -18,7 +18,7 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 - [ ] Slowenien und Spanien (fertig vorbereitet auf Branch spaeter-slowenien-spanien-ratgeber; Slowenien braucht noch amtliche DARS-Preise)
 - [ ] Abgelastet auf 3,5 t: Warum Österreich trotzdem GO-Maut verlangt (F.1 statt F.2, Übergang bis 31.1.2029)
 - [ ] Mautbox fürs Wohnmobil: Lohnt sich das? (Bip&Go, Telepass und Co.)
-- [ ] Sondermaut-Strecken in Österreich (Brenner, Tauern, Arlberg)
+- [x] Sondermaut-Strecken in Österreich (Brenner, Tauern, Arlberg): /maut/oesterreich/sondermaut/
 - [ ] Häufige Fragen je Länderseite (Strafen, Mautboxen, Sonderstrecken)
 
 ### Gewicht und Zuladung
