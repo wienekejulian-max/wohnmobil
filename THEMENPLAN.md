@@ -22,6 +22,7 @@ Wenn ein Punkt fertig ist: Seite anlegen, auf der Startseite und in der Navigati
 - [ ] Häufige Fragen je Länderseite (Strafen, Mautboxen, Sonderstrecken)
 
 ### Gewicht und Zuladung
+- [x] Übersichtsseite „Wohnmobil richtig beladen“ (/ratgeber/wohnmobil-beladen/)
 - [ ] Wie schwer ist mein Wohnmobil wirklich?
 - [ ] Auflasten oder ablasten? (Führerschein, Maut, Steuer, Tempolimit)
 - [ ] Höhe richtig messen (Dachbox, Klimaanlage, Solar; wichtig für Frankreich)
